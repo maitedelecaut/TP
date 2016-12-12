@@ -33,13 +33,13 @@ public class Main {
 			listeJoueurs.ajouterJoueur(new Joueur(name));
 		}
 		for (Joueur j : listeJoueurs.getListe()) {
-			System.out.println("Le joueur " + j.getNom() + " possède " + j.getCredit() + "€ en banque.");
+			System.out.println("Le joueur \033[36m" + j.getNom() + "\033[37m possède " + j.getCredit() + "€ en banque.");
 		}
 		while (true) {
 			// Début de Tour
 			Joueur j = listeJoueurs.getJoueur();
-			System.out.println("C'est à " + j.getNom() + " de jouer");
-			System.out.println("Vous avez " + j.getCredit());
+			System.out.println("C'est à \033[31m" + j.getNom() + "\033[37m de jouer");
+			System.out.println("Vous avez \033[33m" + j.getCredit() +"\033[37m ");
 
 			// Déplacement
 			int pos1Joueur = j.getPos();
@@ -72,7 +72,7 @@ public class Main {
 			jeu.afficherPlateau(listeJoueurs);
 			//info sur joueurs
 			for(Joueur courant : listeJoueurs.getListe()){
-				System.out.println("NomJoueur : " + courant.getNom() + " Argent : " + courant.getCredit());
+				System.out.println("NomJoueur : \033[36m" + courant.getNom() + "\033[37m   Argent : \033[33m" + courant.getCredit() +"\033[37m ");
 			}
 			
 			while (choix != 2) {	
@@ -82,10 +82,10 @@ public class Main {
 				Scanner in2= new Scanner(System.in);
 				rep = in2.nextLine();
 				
-				if(rep.equals("C")){
+				if(rep.equals("C") || rep.equals("c")){
 					choix = 1;
 				}
-				else if(rep.equals("P")){
+				else if(rep.equals("P") || rep.equals("p")){
 					choix = 2;
 				}
 

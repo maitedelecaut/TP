@@ -51,7 +51,6 @@ public class Plateau {
 		this.plateau.add(new Terrain("Avenue des Champs-Elysees",37,350, 35, 175, 500, 1100, 1300, 1500, 200, null));
 		this.plateau.add(new CaseTaxe("Taxe de Luxe",38));
 		this.plateau.add(new Terrain("Rue de la Paix",39,400, 50, 200, 600, 1400, 1700, 2000, 200, null));
-		System.out.println(plateau.size());
 	}		
 
 	public Plateau (boolean f) {
@@ -79,7 +78,7 @@ public class Plateau {
 			int posliste = 0;
 
 			String nom = j.getNom();
-			System.out.println("                  "+nom.substring(0,1));
+			System.out.println("                  \033[36m"+nom.substring(0,1)+"\033[37m");
 
 
 
