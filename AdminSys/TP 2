@@ -1,0 +1,111 @@
+Exercice 2:
+  Q1: Configurez le système APT en utilisant le dépôt de base en version jessie
+  -----------------------------------------------------------------------------
+    echo "deb http://debian.polytech-lille.fr/debian jessie main contrib non-free" >/etc/apt/sources.list
+    echo "Acquire::http::Proxy \"http://cache.univ-lille1.fr:3128\";" >/etc/apt/apt.conf
+
+
+  Q2:Mettre à jour la base des paquets disponibles puis faire une migration du système de wheezy à jessie
+  -------------------------------------------------------------------------------------------------------
+    apt-get update
+    apt-get upgrade
+    apt-get dist-upgrade
+    apt-get clean
+    apt-get autoremove
+    reboot
+
+
+  Q3:Localisez le système pour un fonctionnement, par défaut, en français
+  -----------------------------------------------------------------------
+    dpkg-reconfigure locales (Il faut choisir la locale fr_FR et la valider par défaut.)
+    dpkg-reconfigure tzdata
+    
+    # éventuellement pour l’accès console
+    dpkg-reconfigure keyboard-configuration 
+    dpkg-reconfigure console-setup
+
+
+  Q4: Ajoutez les dépôts de sécurité à la configuration de APT
+  ------------------------------------------------------------
+    echo "deb http://security.debian.org/ jessie/updates main contrib non-free" >>/etc/apt/sources.list
+    apt-get update
+    apt-get upgrade
+    apt-get dist-upgrade
+
+
+Exercice 3:
+  Q1:
+  ---
+    apt-get install less
+
+  Q2:
+  ---
+    apt-get install vim emacs24
+
+  Q3:
+  ---
+    apt-cache search firefox
+    apt-get install firefox-esr
+
+  Q4:
+  ---
+    ssh -X root@192.168.194.34 (l'option -X permet d'activer la transmission graphique)
+    firefox &
+
+  Q5:
+  ---
+    Ajouter les backports de debain puis installer tmux depuis ces backports
+    apt-get install screen
+    echo "deb http://ftp.debian.org/debian jessie-backports main contrib non-free">>/etc/apt/sources.list
+    apt-get update
+    apt-get -t jessie-backports install tmux
+
+
+Exercice 4:
+  Q1:
+    dpkg --list
+
+  Q2:
+    dpkg -L openssh-server
+    
+  Q3: 
+    dpkg -S /sbin/init
+
+
+Exercice 5:
+  Q1: le sript ajouter-n3p1-l (à écrire et lancer sur la machine hôte)
+  --------------------------------------------------------------------
+    #!/bin/bash
+    serveur=192.168.50.128
+
+    for login in $(getent group info-n1p3 | cut -d : -f 4 | tr , ’ ’)
+    do
+      echo useradd -m -p "$(mkpasswd -5 $login)" $login
+    done | ssh root@serveur "cat | bash"
+
+  Q2: bloquer les autres groupes
+  ------------------------------
+    #!/bin/bash
+    
+    serveur=192.168.50.128
+
+    for login in $(getent group info-n1p3 | cut -d : -f 4 | tr , ’ ’)
+    do
+        echo usermod -L $login
+    done | ssh root@serveur "cat | bash"
+
+    for login in $(getent group info-n1p3-l | cut -d : -f 4 | tr , ’ ’)
+    do
+      echo usermod -U $login
+    done | ssh root@serveur "cat | bash"
+
+  Q3: Supprimer tous les utilisateurs dont le login commence par une voyelle
+  --------------------------------------------------------------------------
+    #!/bin/bash
+
+    serveur=192.168.50.128
+
+    for login in $(getent group info-n1p3 | cut -d : -f 4 | tr , \\n | grep ’^[aeiouy]*’)
+    do
+          echo deluser --remove-home $login
+    done | ssh root@serveur "cat | bash"

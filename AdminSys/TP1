@@ -1,0 +1,32 @@
+Exo 4
+1) ip addr show vmnet8
+2) ip route
+3) cat /etc/resolv.conf
+4) vi /etc/network/interfaces
+5) ping 192.168.194.1
+6) ping www.univ-lille1.fr
+
+exo 5
+1) apt-get update
+2) apt-get install tree
+
+Exo 6 
+3) vi .ssh/config
+4) ssh root@192.168.194.128
+5) ssh-keygen -lf /etc/ssh/ssh_host_ecdsa_key.pub
+8) non car la connexion a deja ete etablie
+10)	ssh-keygen -f /etc/ssh/ssh_host_ecdsa_key
+11) ssh-keygen -R 192.168.194.128
+
+
+Exo 7
+1) 	ssh-keygen sur MP
+
+	décommenter listen
+	changer le PermitRootLogin(yes) dans sshd_config de la machine virtuelle
+
+	ssh-copy-id -i id_rsa_root@192.168.194.128
+
+	changer le PermitRootLogin(without-password) dans sshd_config de la machine virtuelle
+
+	pour tester dans la MP: ssh root@192.168.194.128
