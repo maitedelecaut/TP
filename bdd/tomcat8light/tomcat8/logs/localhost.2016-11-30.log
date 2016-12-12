@@ -1,0 +1,814 @@
+30-Nov-2016 09:47:04.763 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/WebTP10] threw exception [Impossible de compiler la classe pour la JSP: 
+
+An error occurred at line: [14] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductDAO resolves to a package
+
+An error occurred at line: [15] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductView resolves to a package
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Impossible de compiler la classe pour la JSP: 
+
+An error occurred at line: [14] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductDAO resolves to a package
+
+An error occurred at line: [15] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductView resolves to a package
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:199)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:446)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:361)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:336)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:323)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:564)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:391)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:335)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:534)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1081)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:658)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1566)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1523)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+30-Nov-2016 09:47:34.338 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/WebTP10] threw exception [Impossible de compiler la classe pour la JSP: 
+
+An error occurred at line: [14] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductDAO resolves to a package
+
+An error occurred at line: [15] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductView resolves to a package
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Impossible de compiler la classe pour la JSP: 
+
+An error occurred at line: [14] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductDAO resolves to a package
+
+An error occurred at line: [15] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductView resolves to a package
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:199)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:446)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:361)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:336)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:323)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:564)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:391)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:335)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:534)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1081)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:658)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1566)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1523)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+30-Nov-2016 09:47:35.644 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/WebTP10] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.Catalogue_jsp] with root cause
+ java.lang.ClassNotFoundException: org.apache.jsp.Catalogue_jsp
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:131)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:62)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:159)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:391)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:335)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:534)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1081)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:658)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1566)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1523)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+30-Nov-2016 09:47:36.412 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/WebTP10] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.Catalogue_jsp] with root cause
+ java.lang.ClassNotFoundException: org.apache.jsp.Catalogue_jsp
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:131)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:62)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:159)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:391)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:335)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:534)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1081)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:658)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1566)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1523)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+30-Nov-2016 09:47:44.847 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/WebTP10] threw exception [Impossible de compiler la classe pour la JSP: 
+
+An error occurred at line: [14] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductDAO resolves to a package
+
+An error occurred at line: [15] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductView resolves to a package
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Impossible de compiler la classe pour la JSP: 
+
+An error occurred at line: [14] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductDAO resolves to a package
+
+An error occurred at line: [15] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductView resolves to a package
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: 
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:199)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:446)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:361)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:336)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:323)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:564)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:391)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:335)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:534)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1081)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:658)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1566)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1523)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+30-Nov-2016 09:50:03.251 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/WebTP10] threw exception [Impossible de compiler la classe pour la JSP: 
+
+An error occurred at line: [14] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductDAO resolves to a package
+
+An error occurred at line: [15] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductView resolves to a package
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: <body>
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: <body>
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: <body>
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: <body>
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Impossible de compiler la classe pour la JSP: 
+
+An error occurred at line: [14] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductDAO resolves to a package
+
+An error occurred at line: [15] in the generated java file: [/home/infoetu/delecaum/aN3/bdd/tomcat8light/tomcat8/work/Catalina/localhost/WebTP10/org/apache/jsp/Catalogue_jsp.java]
+Only a type can be imported. classes.ProductView resolves to a package
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: <body>
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 13 dans le fichier jsp: /Catalogue.jsp
+ProductDAO cannot be resolved to a type
+10: </head>
+11: <body>
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: <body>
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Une erreur s'est produite à la ligne: 14 dans le fichier jsp: /Catalogue.jsp
+ProductView cannot be resolved to a type
+11: <body>
+12: 	<%
+13: 	ProductDAO d = new ProductDAO();
+14: 	ProductView v = new ProductView();
+15: 	Connection con = null;
+16: 	try{
+17: 		con = d.getConnection();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:199)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:446)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:361)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:336)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:323)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:564)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:391)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:335)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:534)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1081)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:658)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1566)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1523)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+30-Nov-2016 11:00:38.427 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/WebTP10] threw exception [Impossible de compiler la classe pour la JSP: 
+
+Une erreur s'est produite à la ligne: 15 dans le fichier jsp: /Produit.jsp
+Type mismatch: cannot convert from String to int
+12: 	ProductDAO d = new ProductDAO();
+13: 	ProductView v = new ProductView();
+14: 	Connection con = null;
+15: 	int pno = request.getParameter("pno");
+16: 	Product p ;
+17: 	try{
+18: 		con = d.getConnection();
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Impossible de compiler la classe pour la JSP: 
+
+Une erreur s'est produite à la ligne: 15 dans le fichier jsp: /Produit.jsp
+Type mismatch: cannot convert from String to int
+12: 	ProductDAO d = new ProductDAO();
+13: 	ProductView v = new ProductView();
+14: 	Connection con = null;
+15: 	int pno = request.getParameter("pno");
+16: 	Product p ;
+17: 	try{
+18: 		con = d.getConnection();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:199)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:446)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:361)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:336)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:323)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:564)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:391)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:335)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:534)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1081)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:658)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1566)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1523)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+30-Nov-2016 11:01:48.376 SEVERE [http-nio-8080-exec-13] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/WebTP10] threw exception [Impossible de compiler la classe pour la JSP: 
+
+Une erreur s'est produite à la ligne: 21 dans le fichier jsp: /Produit.jsp
+Syntax error on token ";", delete this token
+18: 		con = d.getConnection();
+19: 		p = d.findById(pno);
+20: 		%>
+21: 		<%=	v.getDetail(p);%>
+22: 	<%
+23: 	}catch(Exception e){
+24: 		e.printStackTrace();
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Impossible de compiler la classe pour la JSP: 
+
+Une erreur s'est produite à la ligne: 21 dans le fichier jsp: /Produit.jsp
+Syntax error on token ";", delete this token
+18: 		con = d.getConnection();
+19: 		p = d.findById(pno);
+20: 		%>
+21: 		<%=	v.getDetail(p);%>
+22: 	<%
+23: 	}catch(Exception e){
+24: 		e.printStackTrace();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:199)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:446)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:361)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:336)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:323)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:564)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:391)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:335)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:534)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1081)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:658)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1566)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1523)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+30-Nov-2016 11:02:01.105 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/WebTP10] threw exception [Impossible de compiler la classe pour la JSP: 
+
+Une erreur s'est produite à la ligne: 21 dans le fichier jsp: /Produit.jsp
+Syntax error on token ";", delete this token
+18: 		con = d.getConnection();
+19: 		p = d.findById(pno);
+20: 		%>
+21: 		<%=v.getDetail(p);%>
+22: 	<%
+23: 	}catch(Exception e){
+24: 		e.printStackTrace();
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Impossible de compiler la classe pour la JSP: 
+
+Une erreur s'est produite à la ligne: 21 dans le fichier jsp: /Produit.jsp
+Syntax error on token ";", delete this token
+18: 		con = d.getConnection();
+19: 		p = d.findById(pno);
+20: 		%>
+21: 		<%=v.getDetail(p);%>
+22: 	<%
+23: 	}catch(Exception e){
+24: 		e.printStackTrace();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:199)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:446)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:361)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:336)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:323)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:564)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:391)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:335)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:534)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1081)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:658)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1566)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1523)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+

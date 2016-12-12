@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+   <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <TITLE>TP7</TITLE>
+   <link rel="stylesheet" type="text/css" href="./style.css">
+</HEAD>
+<BODY>
+  <center>
+    <h1>Saisie Utilisateur</h1>
+    <form method="post" action = "./servlet/Authent">
+    <div>
+        <label for="login">Login :</label>
+        <input type="text" name="nom" />
+    </div>
+    <div>
+      <label for="mdp">Mot de passe :</label>
+        <input type="password" name="taille" />
+    </div>
+    <INPUT TYPE="submit" NAME="submit" VALUE="valider">
+    </form>
+</body>
+</html>
+

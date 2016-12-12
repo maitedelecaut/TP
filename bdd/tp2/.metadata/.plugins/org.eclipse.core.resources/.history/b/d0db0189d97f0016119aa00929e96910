@@ -1,0 +1,31 @@
+package bddTP2;
+import java.sql.*;
+
+public class Lister {
+
+	static Statement stmt;
+	
+	Lister(Statement stmt){
+		this.stmt = stmt;
+	}
+	
+	
+	
+	public static void main(String args[]) throws Exception{
+		ResultSet rs = stmt.executeQuery("select NOM, PRENOM, AGE from CLIENTS");
+		System.out.println("Liste des donnees");
+		int nbC = rs.getMetaData().getColumnCount();
+		
+		while(rs.next()){
+			for(int i=1; i<=nbC; i++){
+				if(rs.getMetaData().getColumnTypeName(i).equals("int")){
+					System.out.print(rs.getInt(i));
+				}else{
+					System.out.print(rs.getString(i));
+				}
+			}
+			System.out.println();
+		}
+	
+	}
+}

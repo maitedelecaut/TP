@@ -1,0 +1,284 @@
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <ctype.h>
+
+/* On déclare des types dont on est sûr de la taille.
+Si on doit implémenter le TP sur une architecture différente, il
+suffit de changer ces déclarations
+*/
+typedef unsigned short uint16;
+typedef unsigned int uint32;
+
+typedef struct
+{
+uint16 signature;
+uint32 taille_fichier;
+uint32 reserve;
+uint32 offset_donnees;
+} entete_fichier;
+
+typedef struct
+{
+uint32 taille_entete;
+uint32 largeur;
+uint32 hauteur;
+uint16 nombre_plans;
+uint16 profondeur;
+uint32 compression;
+uint32 taille_donnees_image;
+uint32 resolution_horizontale;
+uint32 resolution_verticale;
+uint32 taille_palette; /* en nombre de couleurs */
+uint32 nombre_de_couleurs_importantes; /* 0 */
+} entete_bitmap;
+
+typedef struct
+{
+entete_fichier fichier;
+entete_bitmap bitmap;
+} entete_bmp;
+
+
+void afficher (entete_bmp entete){
+if(verifier_entete(&entete) == 1){
+    printf("MagicNumber: 0x%02X\n", entete.fichier.signature);
+    printf("FileSize: %d bytes\n", entete.fichier.taille_fichier);
+    printf("DataOffset: 0x%08X\n", entete.fichier.offset_donnees);
+    printf("Reserve : %d\n", entete.fichier.reserve);
+    printf("HeaderSize: %d\n" , entete.bitmap.taille_entete);
+    printf("Image Size: %dx%d\n" , entete.bitmap.largeur, entete.bitmap.hauteur);
+    printf("ColorPlanes: %d\n" , entete.bitmap.nombre_plans);
+    printf("ImageDepth: %d\n", entete.bitmap.profondeur);
+    printf("CompressionMethod:: %d\n", entete.bitmap.compression);
+    printf("ImageDataSize: %d bytes\n", entete.bitmap.taille_donnees_image);
+    printf("Resolution: %dx%d\n", entete.bitmap.resolution_horizontale, entete.bitmap.resolution_verticale);
+    printf("PaletteSize: %d\n", entete.bitmap.taille_palette);
+    printf("ImportantPaletteColors: %d\n", entete.bitmap.nombre_de_couleurs_importantes);
+  }else{
+    printf("erreur d entete\n");
+  }
+
+}
+///////////////////lecture//////////////////
+
+int lire_deux_octets(int fd, uint16 *val){
+  return read(fd, val, 2);
+}
+
+int lire_quatre_octets(int fd, uint32 *val){
+  return read(fd, val, 4);
+}
+
+int lire_entete(int de, entete_bmp *entete){
+  // -> donne l element on rajoute le & pour avoir l adresse
+  if(lire_deux_octets(de, &entete->fichier.signature) == -1){
+    return -1;
+  }
+  if(lire_quatre_octets(de, &entete->fichier.taille_fichier) == -1){
+    return -1;
+  }
+  if(lire_quatre_octets(de, &entete->fichier.reserve) == -1){
+    return -1;
+  }
+  if(lire_quatre_octets(de, &entete->fichier.offset_donnees) == -1){
+    return -1;
+  }
+  if(lire_quatre_octets(de, &entete->bitmap.taille_entete) == -1){
+    return -1;
+  }
+  if(lire_quatre_octets(de, &entete->bitmap.largeur) == -1){
+    return -1;
+  }
+  if(lire_quatre_octets(de, &entete->bitmap.hauteur) == -1){
+    return -1;
+  }
+  if(lire_deux_octets(de, &entete->bitmap.nombre_plans) == -1){
+    return -1;
+  }
+  if(lire_deux_octets(de, &entete->bitmap.profondeur) == -1){
+    return -1;
+  }
+  if(lire_quatre_octets(de, &entete->bitmap.compression) == -1){
+    return -1;
+  }  
+  if(lire_quatre_octets(de, &entete->bitmap.taille_donnees_image) == -1){
+    return -1;
+  }  
+  if(lire_quatre_octets(de, &entete->bitmap.resolution_horizontale) == -1){
+    return -1;
+  }
+  if(lire_quatre_octets(de, &entete->bitmap.resolution_verticale) == -1){
+    return -1;
+  }
+  if(lire_quatre_octets(de, &entete->bitmap.taille_palette) == -1){
+    return -1;
+  }
+  if(lire_quatre_octets(de, &entete->bitmap.nombre_de_couleurs_importantes) == -1){
+    return -1;
+  }
+  
+  return 0;
+
+}
+///////////////////Ecriture///////////////
+
+int ecrire_deux_octets(int fd, uint16 val){
+  return write(fd, &val, 2);
+}
+
+int ecrire_quatre_octets(int fd, uint32 val){
+  return write(fd,&val,4);
+}
+
+int ecrire_entete(int vers, entete_bmp *entete){
+  if(ecrire_deux_octets(vers, entete->fichier.signature) == -1){
+    return -1;
+  }
+  if(ecrire_quatre_octets(vers, entete->fichier.taille_fichier) == -1){
+    return -1;
+  }
+  if(ecrire_quatre_octets(vers, entete->fichier.reserve) == -1){
+    return -1;
+  }
+  if(ecrire_quatre_octets(vers, entete->fichier.offset_donnees) == -1){
+    return -1;
+  }
+  if(ecrire_quatre_octets(vers, entete->bitmap.taille_entete) == -1){
+    return -1;
+  }
+  if(ecrire_quatre_octets(vers, entete->bitmap.largeur) == -1){
+    return -1;
+  }
+  if(ecrire_quatre_octets(vers, entete->bitmap.hauteur) == -1){
+    return -1;
+  }
+  if(ecrire_deux_octets(vers, entete->bitmap.nombre_plans) == -1){
+    return -1;
+  }
+  if(ecrire_deux_octets(vers, entete->bitmap.profondeur) == -1){
+    return -1;
+  }
+  if(ecrire_quatre_octets(vers, entete->bitmap.compression) == -1){
+    return -1;
+  };
+  if(ecrire_quatre_octets(vers, entete->bitmap.taille_donnees_image) == -1){
+    return -1;
+  }
+  if(ecrire_quatre_octets(vers, entete->bitmap.resolution_horizontale) == -1){
+    return -1;
+  }
+  if(ecrire_quatre_octets(vers, entete->bitmap.resolution_verticale) == -1){
+    return -1;
+  }
+  if(ecrire_quatre_octets(vers, entete->bitmap.taille_palette) == -1){
+    return -1;
+  }
+  if(ecrire_quatre_octets(vers, entete->bitmap.nombre_de_couleurs_importantes) == -1){
+    return -1;
+  }
+  return 0;
+  
+}
+
+//////////////Limitation/////////////
+
+int verifier_entete(entete_bmp *entete){
+  if(entete->bitmap.profondeur == 24){
+    return 1;
+  }
+  return 0;
+}
+
+///////////Allocation//////////
+unsigned char* allouer_pixels(entete_bmp *entete){
+  return malloc(entete->bitmap.taille_donnees_image);
+}
+
+int lire_pixels(int de, entete_bmp *entete, unsigned char *pixels){
+  read(de, pixels, entete->bitmap.taille_donnees_image);
+}
+
+int ecrire_pixels(int vers, entete_bmp *entete, unsigned char *pixels){
+  write(vers, pixels, entete->bitmap.taille_donnees_image);
+}
+
+int copier_bmp(int de, int vers)
+{
+entete_bmp entete;
+unsigned char *pixels;
+/* lecture du fichier source */
+lire_entete(de, &entete);
+pixels = allouer_pixels(&entete);
+lire_pixels(de, &entete, pixels);
+/* écriture du fichier destination */
+ecrire_entete(vers, &entete);
+ecrire_pixels(vers, &entete, pixels);
+/* on libère les pixels */
+free(pixels);
+return 1; /* on a réussi */
+}
+
+//////////Modification////////
+
+void rouge(entete_bmp *entete, unsigned char *pixels){
+  int i = 0;
+  int r = 2;
+  int b = 0;
+
+  if(entete->bitmap.largeur %4 !=0){
+    //octet de bourrage
+    b = (entete->bitmap.largeur * 3)%4;
+  }
+  
+  while(i < entete->fichier.taille_fichier){
+    if(i == entete->bitmap.largeur){
+      i = i+b;
+      r = r + b;
+    }
+    if(i == r){
+      r = r + 3;
+    }
+    else{
+      pixels[i] = 0;
+    }
+    i++;
+  }
+}
+
+int main(void){
+  int fd = open("tp6", O_RDWR);
+  int des = open("rouge1.bmp", O_CREAT| O_WRONLY);
+  entete_bmp entete;
+  //lire_entete(fd, &entete);
+
+  /*Test verif_entete
+  entete.bitmap.profondeur = 6;
+  ecrire_entete(fd, &entete);
+  printf("//////Ecriture//////\n");
+  printf("ImageDepth : %d\n", entete.fichier.reserve);*/
+
+  //afficher(entete);
+
+  /*entete.fichier.reserve = 1;
+  ecrire_entete(fd, &entete);
+  printf("//////Ecriture//////\n");
+  printf("Reserve : %d\n", entete.fichier.reserve);*/
+
+  /*printf("//////Copie/////\n");
+    copier_bmp(fd,des);*/
+
+  printf("//////Rouge/////\n");
+  unsigned char *pixels;
+  lire_entete(fd, &entete);
+  pixels = allouer_pixels(&entete);
+  lire_pixels(fd, &entete, pixels);
+  rouge(&entete,pixels);
+  ecrire_entete(des, &entete);
+  ecrire_pixels(des, &entete, pixels);
+  free(pixels);
+  
+  close(fd);
+  //close(des);
+}

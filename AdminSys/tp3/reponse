@@ -1,0 +1,31 @@
+192.168.194.10
+	    200
+Ex1:
+
+   Q6 : on va editer /etc/hostname pour ajouter
+
+   	 /etc/hosts
+   	    192.168.194.10 client client.tp client.iut.fr et on fait de même pour 200 et ceux dans les deux dossier
+
+   Q7 : apt-get install ....
+   Q8 : adduser "nomUser"
+
+Ex2:
+	Q3 : on entre dans la barre de recherche localhost
+	Q4 : on se connect depuis un terminal en root à serveur.
+	     dans /etc/ssh/sshd_config on passe PermitRootLogin yes
+	     est on fait service ssh restart
+
+	     On lance la commande firefox-est http://www.univ-lille1.fr dans mon terminal ou je suis connecté en root
+
+Ex3 :
+	Q2 : le fichier /etc/apache2/conf-available/apache2-doc.conf
+	     	Alias /doc /usr/share/doc/apache2-doc/manual/
+
+		<Directory "/usr/share/doc/apache2-doc/manual/">
+		    Option Indexes FollowSymlinks
+		    AllowOverride None
+		    Require all granted
+		    AddDefaultCharset off
+		</Directory>
+	

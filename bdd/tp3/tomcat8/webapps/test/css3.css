@@ -1,0 +1,4 @@
+th{color:white; background-color: grey;}
+tr:nth-child(even) {background: white}
+tr:nth-child(odd) {background: lightgrey;}
+tr:hover{background-color:green;}

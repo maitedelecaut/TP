@@ -1,0 +1,18 @@
+package bddTP2;
+import java.io.FileReader;
+import java.util.Properties;
+
+public class Externalisation {
+	public static void main(String args[]) throws Exception{
+		
+		//lecture fichier properties
+		Properties pro = new Properties();
+		FileReader fichier = new FileReader("Properties");
+		pro.load(fichier);
+		
+		String driver = pro.getProperty("driver");
+		String url = pro.getProperty("url");
+		String login = pro.getProperty("login");
+		String mdp = pro.getProperty("password");
+	}
+}

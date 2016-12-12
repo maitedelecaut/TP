@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+   <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <TITLE>CTP SAISIE</TITLE>
+   <link rel="stylesheet" type="text/css" href="./style1.css">
+</HEAD>
+<BODY>
+  <center>
+    <h1>Menu</h1>
+    <div id=\"NavBar\">
+    <ul>
+    <li><a href="./servlet/Lecture">Afficher mes infos</a></li>
+    <li><a href="./servlet/Modif">Modifier mes infos</a></li>
+    </ul>
+    </div>
+</BODY>
+</HTML>

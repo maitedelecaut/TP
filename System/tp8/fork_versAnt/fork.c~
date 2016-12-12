@@ -1,0 +1,7 @@
+int main(void)
+{
+printf ("Tout seul");
+fork ();
+printf ("Nous sommes deux !\n");
+return 0;
+}

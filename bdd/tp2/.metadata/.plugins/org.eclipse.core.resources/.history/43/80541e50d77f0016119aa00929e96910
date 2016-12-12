@@ -1,0 +1,36 @@
+package bddTP2;
+import java.sql.*;
+
+public class Lister {
+
+	public static void main(String[] args) {
+		
+		try{
+			//connexion au driver
+			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+		
+			// connexion a la base de donnee
+			String url = "jdbc:odbc:tp2_2";
+			Connection con = DriverManager.getConnection(url);
+			
+			//execution requete
+			Statement stmt = con.createStatement();
+			
+			String query = "select NOM, PRENOM, AGE from " + args[0];
+			ResultSet rs = stmt.executeQuery(query);
+			System.out.println("Liste des donnees");
+			while(rs.next()){
+				String n = rs.getString("1");
+				String p = rs.getString("2");
+				int a = rs.getInt("3");
+				System.out.println(n + " " + p + " " + a);
+			}
+			
+			
+			con.close();
+			
+		}catch(Exception e){
+			e.printStackTrace();
+	}
+
+}

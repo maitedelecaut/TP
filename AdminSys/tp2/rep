@@ -1,0 +1,68 @@
+Ex2
+	Q1: on se connect à la machine virtuel avec ssh root@192.168.194.29
+
+*****
+mod depot base debian sed '' /etc/apt/sources.list
+
+sed - i "aModif/modification" fichier
+
+sed -i "s/\# deb http\:\/\/ftp.us.debian.org\/debian\/ wheezy main/deb http\:\/\/security.debian.org\/ jessie\/updates main contrib non-free/" /etc/apt/sources.list
+
+inserer ligne ->
+	sed -i "2i deb-src http://security.debian.org/ jessie/updates main contrib non-free" /etc/apt/sources.list
+
+****
+
+	 Acquire::http::proxy "http://193.49.225.9:3128
+-> echo "Acquire::http::proxy \"http://193.49.225.9:3128\";" >> /etc/apt/apt.conf
+							      > va ecraser le fichier
+
+   	Q2:  sed -i "1a\deb-src http://security.debian.org/ jessie/updates main contrib non-free" /etc/apt/sources.list
+
+
+deb http://security.debian.org/ jessie/updates main contrib non-free
+deb-src http://security.debian.org/ jessie/updates main contrib non-free
+
+deb http://debian.polytech-lille.fr/debian/ jessie/updates main contrib non-free
+deb-src http://debian.polytech-lille.fr/debian/ jessie/updates main contrib non-free
+
+deb http://security.debian.org/ wheezy/updates main
+deb-src http://security.debian.org/ wheezy/updates main
+
+# wheezy-updates, previously known as 'volatile'
+deb http://debian.polytech-lille.fr/debian/ jessie/ main contrib non-free
+deb-src http://debian.polytech-lille.fr/debian/ jessie/updates main contrib non-free
+
+echo "deb http://security.debian.org/ jessie/updates main contrib non-free" > /etc/apt/sources.list
+
+sed -i "5a\ " /etc/apt/sources.list
+
+sed -i "8a\deb-src http://debian.polytech-lille.fr/debian/ jessie/updates main contrib non-free" /etc/apt/sources.list
+
+sed "9d" /etc/apt/sources.list ->supp
+
+sed -i "s/wheezy jessie" /etc/apt/sources.list
+
+       Q3: on reconfig les paquets tzdata et local
+
+       	   dpkg-reconfigure tzdata
+	   dpkg-reconfigure locales
+
+Ex3:
+	Q1: aptitude search 'less'
+	    apt-get install jless
+
+	Q2: apt-get install vi
+	    apt-get install vim
+
+	Q3: apt-get install firefox-esr 
+
+	Q4: https://www.skyminds.net/serveur-dedie-activer-x11-forwarding-pour-ssh/
+	
+
+
+
+Script -> etape 2 peut être réaliser sur la machine physique et executer avec ssh sur la machine virtuel avec un tube
+       	  1) recuperer les logins sur la machine physique: getent group info_n3p1 | cut .... | tr ... -> on va les placer dans un logins.txt et on transfert dans machine virtuel.
+       	  2) itérer sur logins.txt et pour chaque login utiliser la commande adduser login mdp où le mot de passe est crypté avec mkpasswd
+	  -> on verif dans /etc/passxd qu'on a bien tout

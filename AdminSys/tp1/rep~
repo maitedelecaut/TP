@@ -1,0 +1,44 @@
+Ex4: editer avec nano
+Q1 : ip a -> inet 192.168.194.1/24 brd 192.168.194.255 scope global vmnet8
+	Q2 : ip route
+	Q3 : vi /etc/resolv.conf -> domain localdomain  -> nom du domaine local
+	     			    search localdomain  -> liste de recherche par noms d'hote
+				    nameserver 192.168.194.2  -> adresse ip du serveur de nom
+
+       Q4 : /etc/network/interfaces contient interface
+       iface eth0 inet static
+       address 192.168.194.128
+       netmask 255.255.255.0
+       gateway -> ip route -> default via 192.168.194.2
+       ifdown eth0
+       ifup eth0
+       reboot
+
+       Q5: ping 192.168.194.1
+
+
+Ex5:
+	Q1: apt update
+	Q2: apt install tree
+
+Ex6:
+	Q1: apt install openssh-server
+	Q4: ssh 192.168.194.128
+	Q5: ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub
+	Q6: Q4 et on compare adresse
+	Q8: On entre directement le mot de passe. On a pas coupé la connexion
+	Q10: ssh-keygen -t ecdsa
+	Q11: on ne redemande que le mot de passe. La clé est propre à la machine donc elle reste la même. Si on change la clé il ne redemanderait de valider "yes"
+	Q12: ssh-keygen -R 192.168.194.128
+
+Ex 7 :
+	Q1:!!!! on se deconnecte du serveur ssh-keygen -t rsa
+	Q2: ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.194.128
+	Q3: dans machine virtuelle on modif dans nano /etc/ssh/sshd_config -> permitRootLogin yes pour accorder la permission de se connect
+	service ssh restart
+	machine physique ssh root@192.168.194.128
+	*
+	*
+	*
+	pour ne plus se connect dans machine physique après avoir quitter serveur
+	-> ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.194.128

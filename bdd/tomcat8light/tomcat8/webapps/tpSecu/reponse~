@@ -1,0 +1,6 @@
+I)
+	Q1 : grep Connection *.java
+	Q2 : sed -i.old -e s/localhost/psqlserv/ -e s/template1/n3p1/ -e s/mathieu/delecaum/ *.java
+
+3)
+	Q1: avec ' OR'1'='1 -> dans afficher info on voit tous les membres de la table

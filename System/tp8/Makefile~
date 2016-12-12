@@ -1,0 +1,6 @@
+CC = gcc
+CFLAGS = -Wall -w -Werror
+iutsh: iutsh.o 
+	$(CC) $(CFLAGS) -o iutsh iutsh.o 
+iutsh.o :iutsh.c
+	$(CC) $(CFLAGS) -c iutsh.c

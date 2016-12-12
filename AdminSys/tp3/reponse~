@@ -1,0 +1,6 @@
+192.168.194.10
+	    200
+
+Q6 : on va editer /etc/hostname pour ajouter
+
+   192.168.194.10 client client.tp client.iut.fr et on fait de même pour 200 et ceux dans les deux dossier

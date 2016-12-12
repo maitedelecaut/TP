@@ -1,0 +1,4 @@
+driver=sun.jdbc.odbc.JdbcOdbcDriver
+url=jdbc:odbc:tp2_2
+login=delecaum
+password=moi

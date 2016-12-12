@@ -1,0 +1,18 @@
+Ex2
+	Q1: on se connect à la machine virtuel avec ssh root@192.168.194.29
+
+*****
+mod depot base debian sed '' /etc/apt/sources.list
+
+sed - i "aModif/modification" fichier
+
+sed -i "s/\# deb http\:\/\/ftp.us.debian.org\/debian\/ wheezy main/deb http\:\/\/security.debian.org\/ jessie\/updates main contrib non-free/" /etc/apt/sources.list
+
+inserer ligne ->
+	sed -i "2i deb-src http://security.debian.org/ jessie/updates main contrib non-free" /etc/apt/sources.list
+
+****
+
+Acquire::http::proxy "http://193.49.225.25:3128
+-> echo "Acquire::http::proxy \"http:\/\/193.49.225.25:3128\"" >> /etc/apt/apt.conf
+

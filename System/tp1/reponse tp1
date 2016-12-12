@@ -1,0 +1,4 @@
+Q1: par defaut a.out
+Q2: -o permet de changer le nom du fichier compilé
+Q3: ici la fonction ne retour par la bonne chose; Pour 0 ont devrait retourner null.
+Q4:gcc tp1_1.c -o tp1_1 -Wall -W -Werror -> permet de trouver erreur

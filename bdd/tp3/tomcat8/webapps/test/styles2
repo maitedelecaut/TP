@@ -1,0 +1,14 @@
+body{background-color:lavender;}
+h1{color: white; background-color: black; text-align:center; font-size:2em,}
+h2{font-size:2em;}
+h3{font-size:2em; font-family: Trebuchet MS, arial, Sans-sherif;}
+body>header, footer{font-size:3em; letter-spacing: 1em; text-align: center; border: groove; border-collapse: black;}
+article>div{background: grey; width: 46%; display: inline-block; margin:1%, padding:1%;}
+li{display: inline;}
+nav{background-color: grey; padding:4px;}
+nav>ol>li>a:link{color:white; background: grey; font-size:2em;font-family: Trebuchet MS, arial, Sans-sherif;}
+nav>ol>li>a:hover{color:balck;}
+
+nav{display: inline-block;width: 150px;border: 1px solid black;vertical-align: top;}
+
+section{display: inline-block; border: 1px solid blue;vertical-align: top;}

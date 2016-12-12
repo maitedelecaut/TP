@@ -1,0 +1,9 @@
+CC = gcc
+CFLAGS = -Wall -w -Werror
+
+tp2: tp2.o 
+	$(CC) $(CFLAGS) -o tp2 tp2.o 
+tp2.o : tp2.c
+	$(CC) $(CFLAGS) -c tp2.c
+
+

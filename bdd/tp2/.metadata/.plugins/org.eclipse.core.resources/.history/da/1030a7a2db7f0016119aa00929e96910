@@ -1,0 +1,11 @@
+package bddTP2;
+import java.io.FileReader;
+import java.util.Properties;
+
+public class Externalisation {
+	public static void main(String args[]) throws Exception{
+		Properties pro = new Properties();
+		FileReader fichier = new FileReader("Properties");
+		
+	}
+}

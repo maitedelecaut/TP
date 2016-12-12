@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title> MaPage </title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    avec quelques accents à é è ù
+    <p>Bonjour à vous</p>
+    <p>Où se trouve le téléphone</p>
+  </body>
+</html>

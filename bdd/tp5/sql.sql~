@@ -1,0 +1,8 @@
+Create Table resultat
+( nom char(20),
+  annee int,
+  nationalite char(20),
+  categ char(20),
+  club char(10),
+  temps int
+);

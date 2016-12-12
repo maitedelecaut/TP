@@ -1,0 +1,6 @@
+CC = gcc
+CFLAGS = -Wall -w -Werror
+bmp: bmp.o 
+	$(CC) $(CFLAGS) -o bmp bmp.o 
+bmp.o : bmp.c
+	$(CC) $(CFLAGS) -c bmp.c

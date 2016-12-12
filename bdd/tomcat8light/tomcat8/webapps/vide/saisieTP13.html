@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+   <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <TITLE>CTP SAISIE</TITLE>
+</HEAD>
+<BODY>
+  <center>
+    <h1>Saisie des Absences</h1>
+    <form method="post" action = "servlet/Absences">
+    <div>
+        <label for="cours">Cours :</label>
+        <input type="text" name="cours" />
+    </div>
+    <div>
+      <label for="creneauD">Debut du cours :</label>
+        <input type="Time" name="creneauD" />
+    </div>
+    <div>
+      <label for="creneauF">Fin du cours :</label>
+      <input type="Time" name="creneauF" />        
+    </div>
+    <div>
+      <label for="date">Date du jour :</label>
+      <input type="Date" name="date" />        
+    </div>
+    <div>
+      <label for="pno_eleve">Nom de l'eleve absent :</label>
+      <input type="text" name="etu" />        
+    </div>
+    <div>
+      <label for="pno_prof">Nom deu prof :</label>
+      <input type="text" name="prof" />        
+    </div>
+    <INPUT TYPE="submit" NAME="submit" VALUE="valider">
+    </form>
