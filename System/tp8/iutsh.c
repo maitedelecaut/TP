@@ -22,14 +22,17 @@ void affiche_prompt(){
   user = getenv("USER");
   gethostname (machine, 255);
 
-  taille_cwd = 256;
+  taille_cwd = 100;
   cwd = malloc(taille_cwd);
   while ( getcwd(cwd, taille_cwd) == NULL){
     taille_cwd += 256;
     cwd = realloc(&cwd, taille_cwd);
   }
+  char *tilde = malloc(242);
+  strcpy(tilde,"~");
+  strncat(tilde, cwd+23, strlen(cwd));
 
-  printf("%s@%s %s: ", user, machine, cwd);
+  printf("%s@%s:%s: ", user, machine, tilde);
   fflush(NULL);
 
   free(cwd);
