@@ -1,5 +1,7 @@
 192.168.194.10
 	    200
+
+CTRL-R -> recherche dans mes entrés clavier 
 Ex1:
 
    Q6 : on va editer /etc/hostname pour ajouter
@@ -16,16 +18,31 @@ Ex2:
 	     dans /etc/ssh/sshd_config on passe PermitRootLogin yes
 	     est on fait service ssh restart
 
-	     On lance la commande firefox-est http://www.univ-lille1.fr dans mon terminal ou je suis connecté en root
+	     ATTENTION se connect en route avec ssh -X root@----- pour rediriger l'affichage de la machine virtuel vers la machine physique
+
+	     On lance la commande firefox-esr http://www.univ-lille1.fr dans mon terminal ou je suis connecté en root
 
 Ex3 :
-	Q2 : le fichier /etc/apache2/conf-available/apache2-doc.conf
+	Q3 : le fichier /etc/apache2/conf-available/apache2-doc.conf
+
+on crée le fichier /etc/apache2/conf-available/local-tp.conf
 	     	Alias /doc /usr/share/doc/apache2-doc/manual/
 
 		<Directory "/usr/share/doc/apache2-doc/manual/">
-		    Option Indexes FollowSymlinks
+		    Options Indexes FollowSymlinks
 		    AllowOverride None
 		    Require all granted
 		    AddDefaultCharset off
 		</Directory>
-	
+on enregistre. Le fichier est enregistrer dans conf-available mais ne peu etre executer. Les fichier executable sont dans conf-enable
+On fait donc cd /etc/apache2/conf-available et on execute a2conf local-tp qui crée un lien symbolique dans enable
+On execute ensuite service apache2 reload
+
+       Q4 : cd /etc/apache2/mods-available/ et on trouve userdir.conf
+       nano -> on modif UserDir public_html
+       	       	  par   UserDir web
+
+		  on modif aussi DIrectory -> <Directory /home/*/web>
+
+		  pour tester on va dans home et dans chaque eleve on crée un fichier web dans lequel on met un fichier html. on verifie que ca marche avec ~nom_eleve
+
