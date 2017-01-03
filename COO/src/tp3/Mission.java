@@ -21,8 +21,7 @@ public class Mission {
 			if (hRet < 0 || hRet > 23) {
 				throw new IllegalArgumentException("Heure de retour erronee");
 			}
-		}
-		else {
+		}else {
 			if (hRet <= hDep || hRet > 23) {
 				throw new IllegalArgumentException("Heure de retour erronee");
 			}
@@ -70,7 +69,7 @@ public class Mission {
 				rep += 2;
 			}
 		}
-		if (jDep > jRet) {
+		if (jDep < jRet) {
 			rep += 2*(jRet-jDep-1);
 		}
 		return rep;
